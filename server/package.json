@@ -42,9 +42,11 @@
   "dependencies": {
     "@overnightjs/core": "^1.7.5",
     "@types/express-serve-static-core": "^4.17.13",
+    "@types/mongoose": "^5.7.36",
     "config": "^3.3.1",
     "express": "^4.17.1",
     "module-alias": "^2.2.2",
+    "mongoose": "^5.10.6",
     "supertest": "^4.0.2"
   }
 }
