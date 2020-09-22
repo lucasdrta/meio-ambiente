@@ -1,6 +1,7 @@
 import './utils/module-alias'
 import { Server } from '@overnightjs/core'
 import express, { Application } from 'express'
+import { PlantationsController } from '@src/controllers/plantations'
 
 export class ServerSetup extends Server {
   constructor (private port = 3000) {
@@ -17,7 +18,8 @@ export class ServerSetup extends Server {
   }
 
   private setupControllers (): void {
-    this.addControllers([])
+    const plantationsController = new PlantationsController()
+    this.addControllers([plantationsController])
   }
 
   public start (): void {
