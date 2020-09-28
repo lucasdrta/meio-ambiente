@@ -1,4 +1,5 @@
-import { Controller, Get } from '@overnightjs/core'
+import { Controller, Get, Post } from '@overnightjs/core'
+import { Plantation } from '@src/models/plantation'
 import { Request, Response } from 'express'
 
 @Controller('plantations')
@@ -28,5 +29,18 @@ export class PlantationsController {
       }
     ]
     )
+  }
+
+  @Post('')
+  public async create (req: Request, res: Response): Promise<void> {
+    try {
+      const plantation = await new Plantation(req.body).save()
+      res.status(201).send(plantation)
+    } catch (error) {
+      res.status(400).send({
+        code: 400,
+        message: error.message
+      })
+    }
   }
 }
