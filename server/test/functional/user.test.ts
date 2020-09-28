@@ -20,12 +20,28 @@ describe('User functional test', () => {
       await expect(
         AuthService.comparePasswords(newUser.password, response.body.password)
       ).resolves.toBeTruthy()
+
       expect(response.body).toEqual(
         expect.objectContaining({
           ...newUser,
           ...{ password: expect.any(String) }
         })
       )
+    })
+
+    it('should return error when a field is missing', async () => {
+      const newUser = {
+        email: 'john@mail.com',
+        password: '1234'
+      }
+
+      const response = await global.testRequest.post('/users').send(newUser)
+
+      expect(response.status).toBe(400)
+      expect(response.body).toEqual({
+        code: 400,
+        message: 'User validation failed: name: Path `name` is required.'
+      })
     })
   })
 })
