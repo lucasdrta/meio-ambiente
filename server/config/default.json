@@ -3,6 +3,10 @@
     "port": 3000,
     "database": {
       "mongoURL": "mongodb://localhost:27017/meio-ambiente"
+    },
+    "auth": {
+      "key": "575045a27790f0463dbd05002c6a83aa",
+      "tokenExpiresIn": "200000000"
     }
   }
 }
