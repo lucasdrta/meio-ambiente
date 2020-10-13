@@ -5,7 +5,7 @@ describe('Farm functional test', () => {
     await Farm.deleteMany({})
   })
 
-  it('should return a list of farms with owner', async () => {
+  it('should return a list of farms', async () => {
     const farm = {
       location: 'Av Paulista, 2500',
       owner: 'Francisco da Silva Santos',
@@ -42,5 +42,17 @@ describe('Farm functional test', () => {
     const response = await global.testRequest.post('/farms').send(farm)
     expect(response.status).toBe(201)
     expect(response.body).toEqual(expect.objectContaining(farm))
+  })
+
+  it('should return error when fields is missing to create a farm', async () => {
+    const farm = {}
+
+    const response = await global.testRequest.post('/farms').send(farm)
+
+    expect(response.status).toBe(400)
+    expect(response.body).toEqual({
+      code: 400,
+      message: 'Farm validation failed: location: Path `location` is required., cnpj: Path `cnpj` is required., owner: Path `owner` is required.'
+    })
   })
 })
