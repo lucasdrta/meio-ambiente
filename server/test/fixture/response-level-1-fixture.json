@@ -2,21 +2,33 @@
   {
     "id": "632g323832g",
     "location": "Av Paulista, 2500",
-    "owner": "Francisco da Silva Santos"
+    "owner": "Francisco da Silva Santos",
+    "pesticide": ["a1", "a2", "a3", "a4"],
+    "cnpj": "35358070000109",
+    "culture": "soja"
   },
   {
     "id": "rry48d334fr832g",
     "location": "Av Rebouças, 200",
-    "owner": "Mario de Andrade"
+    "owner": "Mario de Andrade",
+    "pesticide": ["a1", "a2", "a3", "a4"],
+    "cnpj": "254820908520108",
+    "culture": "tomate"
   },
   {
     "id": "3fhu95423832g",
     "location": "Rua da Consolação, 678",
-    "owner": "Augusto Soares"
+    "owner": "Augusto Soares",
+    "pesticide": ["a1", "a2", "a3", "a4"],
+    "cnpj": "353580700070405",
+    "culture": "trigo"
   },
   {
     "id": "456465f95423832g",
     "location": "Rua da Consolação, 678",
-    "owner": "Silvia Maria"
+    "owner": "Silvia Maria",
+    "pesticide": ["a1", "a2", "a3", "a4"],
+    "cnpj": "580960804080505",
+    "culture": "maçã"
   }
 ]
