@@ -1,7 +1,7 @@
 import './utils/module-alias'
 import { Server } from '@overnightjs/core'
 import express, { Application } from 'express'
-import { PlantationsController } from '@src/controllers/plantations'
+import { FarmsController } from '@src/controllers/farm'
 import { UsersController } from './controllers/users'
 import * as database from './database'
 
@@ -21,7 +21,7 @@ export class ServerSetup extends Server {
   }
 
   private setupControllers (): void {
-    const plantationsController = new PlantationsController()
+    const plantationsController = new FarmsController()
     const usersController = new UsersController()
     this.addControllers([plantationsController, usersController])
   }
