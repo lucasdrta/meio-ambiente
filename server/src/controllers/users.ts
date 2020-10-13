@@ -3,9 +3,10 @@ import { User } from '@src/models/user'
 import AuthService from '@src/service/auth'
 import { Request, Response } from 'express'
 import { authMiddleware } from '@src/middlewares/auth'
+import { BaseController } from '.'
 
 @Controller('users')
-export class UsersController {
+export class UsersController extends BaseController {
   @Post('')
   public async create (req: Request, res: Response): Promise<void> {
     try {
@@ -13,10 +14,7 @@ export class UsersController {
       const newUser = await user.save()
       res.status(201).send(newUser)
     } catch (error) {
-      res.status(400).send({
-        code: 400,
-        message: error.message
-      })
+      this.sendErrorResponse(res, error)
     }
   }
 
