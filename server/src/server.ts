@@ -1,5 +1,6 @@
 import './utils/module-alias'
 import { Server } from '@overnightjs/core'
+import cors from 'cors'
 import express, { Application } from 'express'
 import { FarmsController } from '@src/controllers/farm'
 import { UsersController } from './controllers/users'
@@ -18,6 +19,7 @@ export class ServerSetup extends Server {
 
   private setupExpress (): void {
     this.app.use(express.json())
+    this.app.use(cors())
   }
 
   private setupControllers (): void {
