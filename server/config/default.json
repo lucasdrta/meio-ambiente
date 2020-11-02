@@ -1,6 +1,6 @@
 {
   "App": {
-    "port": 3000,
+    "port": 3333,
     "database": {
       "mongoURL": "mongodb://localhost:27017/meio-ambiente"
     },
