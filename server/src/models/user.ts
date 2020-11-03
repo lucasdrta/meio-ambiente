@@ -5,6 +5,7 @@ export interface IUser {
   _id?: string;
   name: string;
   email: string;
+  position: string,
   password: string;
 }
 
@@ -26,6 +27,12 @@ const schema = new Schema(
       required: true,
       trim: true,
       unique: [true, 'Email must be unique']
+    },
+    position: {
+      type: String,
+      required: true,
+      trim: true,
+      default: 'public'
     },
     password: {
       type: String,
