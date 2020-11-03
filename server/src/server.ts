@@ -5,7 +5,8 @@ import express, { Application } from 'express'
 import { FarmsController } from '@src/controllers/farm'
 import { UsersController } from './controllers/users'
 import * as database from './database'
-
+import bodyParser from 'body-parser'
+import multer from 'multer'
 export class ServerSetup extends Server {
   constructor (private port = 3000) {
     super()
@@ -18,8 +19,10 @@ export class ServerSetup extends Server {
   }
 
   private setupExpress (): void {
-    this.app.use(express.json())
+    this.app.use(bodyParser.json())
+    this.app.use(bodyParser.urlencoded({ extended: true }))
     this.app.use(cors())
+    this.app.use('/users', multer().single('file'))
   }
 
   private setupControllers (): void {
