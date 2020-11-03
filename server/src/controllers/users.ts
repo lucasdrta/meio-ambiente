@@ -4,12 +4,15 @@ import AuthService from '@src/service/auth'
 import { Request, Response } from 'express'
 import { authMiddleware } from '@src/middlewares/auth'
 import { BaseController } from '.'
+import { ProcessImage } from '@src/service/processImage'
 
+const processImage = new ProcessImage()
 @Controller('users')
 export class UsersController extends BaseController {
   @Post('')
   public async create (req: Request, res: Response): Promise<void> {
     try {
+      processImage.saveImage(req.file, req.body.email)
       const user = new User(req.body)
       const newUser = await user.save()
       res.status(201).send(newUser)
