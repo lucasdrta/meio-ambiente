@@ -2,7 +2,7 @@
   "App": {
     "port": 3333,
     "database": {
-      "mongoURL": "mongodb://localhost:27017/meio-ambiente"
+      "mongoURL": "mongodb://localhost:27017/farm-data"
     },
     "auth": {
       "key": "575045a27790f0463dbd05002c6a83aa",

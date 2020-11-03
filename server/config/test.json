@@ -1,7 +1,7 @@
 {
   "App": {
     "database": {
-      "mongoURL": "mongodb://localhost:27017/meio-ambiente-test"
+      "mongoURL": "mongodb://localhost:27017/farm-data-test"
     }
   }
 }
