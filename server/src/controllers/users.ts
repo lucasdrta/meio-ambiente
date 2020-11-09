@@ -12,7 +12,9 @@ export class UsersController extends BaseController {
   @Post('')
   public async create (req: Request, res: Response): Promise<void> {
     try {
-      processImage.saveImage(req.file, req.body.email)
+      if (req.file) {
+        processImage.saveImage(req.file, req.body.email)
+      }
       const user = new User(req.body)
       const newUser = await user.save()
       res.status(201).send(newUser)
