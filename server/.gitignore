@@ -3,3 +3,6 @@ dist
 *.log
 
 data
+*.jpeg
+*.png
+*.tiff
