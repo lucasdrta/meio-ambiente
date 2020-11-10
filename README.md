@@ -74,7 +74,7 @@ $ cd meio-ambiente
 $ cd ./server
 # Instale as dependências
 $ yarn ou npm install
-# Na raiz do projeto, acesse a pasta server no terminal/cmd
+# Na raiz do projeto, acesse a pasta frontend no terminal/cmd
 $ cd ./frontend
 # Instale as dependências
 $ yarn ou npm install
