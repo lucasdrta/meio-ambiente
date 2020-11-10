@@ -82,7 +82,6 @@ $ yarn ou npm install
 $ yarn start
 
 # ------------------------------------------------------------------------------------
-# Necessario ter o serviço do MongoDB em execução. 
 # Para a aplicação ser executada sem erros é preciso ter o serviço do mongodb rodando.
 # Para instalar, veja a documentação em https://www.mongodb.com/
 # ------------------------------------------------------------------------------------
