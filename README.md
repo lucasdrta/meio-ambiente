@@ -108,8 +108,8 @@ $ yarn start ou npm start
 | `GET /farms`               | Retorna uma lista com todos as informações das fazendas |
 | `POST /farms`              | Rota para criação de uma nova fazenda                   |
 | `POST /users`              | Rota para criação de um novo usuario                    |
-| `POST /users/authenticate` | Rota login de um usuario                                |
-| `GET /users/me`            | Rota para retornar informaçoes de um usuario            |
+| `POST /users/authenticate` | Rota para login de um usuario                           |
+| `GET /users/me`            | Rota para retornar informações de um usuario            |
 
 <br>
 <br>
